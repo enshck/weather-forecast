@@ -10,5 +10,8 @@
     "build:server": "node build-server.js",
     "build:client": "cd client && npm run build",
     "build": "npm run build:client && npm run build:server && cp appsscript.json dist/"
+  },
+  "engines": {
+    "node": "22"
   }
 }

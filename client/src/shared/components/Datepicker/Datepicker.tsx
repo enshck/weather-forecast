@@ -12,7 +12,7 @@ type DatepickerProps = ReactDatePickerProps & {
 
 const Datepicker: FC<DatepickerProps> = ({ label, ...datepickerProps }) => {
   return (
-    <Field.Root gap="0" w={"full"}>
+    <Field.Root gap={1} w={"full"}>
       {label && <FieldLabel>{label}</FieldLabel>}
       <ReactDatePicker
         customInput={<Input w={"full"} />}

@@ -28,7 +28,7 @@ const CitySearchInput: FC<CitySearchProps> = ({ value, onChange }) => {
   });
 
   const onChangeInputDebounce = useMemo(
-    () => debounce((inputValue: string) => setInputValue(inputValue), 400),
+    () => debounce((inputValue: string) => setInputValue(inputValue), 300),
     [setInputValue],
   );
 
@@ -56,7 +56,7 @@ const CitySearchInput: FC<CitySearchProps> = ({ value, onChange }) => {
       onSelect={(data) => onChange([data.itemValue])}
       value={value}
       positioning={{ sameWidth: false, placement: "bottom-start" }}
-      gap={0}
+      gap={1}
     >
       <Combobox.Label>City</Combobox.Label>
       <Combobox.Control>

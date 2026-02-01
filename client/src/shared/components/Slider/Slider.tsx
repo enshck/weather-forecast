@@ -13,7 +13,7 @@ type SliderProps = SliderRootProps & {
 
 const Slider: FC<SliderProps> = ({ marks, label, ...sliderProps }) => {
   return (
-    <Field.Root gap="0" w={"full"}>
+    <Field.Root gap={1} w={"full"}>
       {label && <FieldLabel>{label}</FieldLabel>}
       <ChakraSlider.Root w={"full"} {...sliderProps}>
         <ChakraSlider.Control>
