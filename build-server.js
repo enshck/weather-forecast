@@ -3,11 +3,11 @@ import fs from "fs";
 
 esbuild
   .build({
-    entryPoints: ["server/Code.ts"], // главный файл сервера
+    entryPoints: ["server/Code.ts"],
     bundle: true,
-    outfile: "dist/server/code.js", // куда положить сборку
-    platform: "neutral", // без Node/Browser-специфики (важно для GAS)
-    format: "esm", // самовызывающаяся функция
+    outfile: "dist/server/code.js",
+    platform: "neutral",
+    format: "esm",
     sourcemap: false,
     target: ["es2019"],
     minify: false,
