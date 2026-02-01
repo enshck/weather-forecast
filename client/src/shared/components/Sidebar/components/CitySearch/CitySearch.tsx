@@ -23,8 +23,8 @@ const CitySearchInput: FC<CitySearchProps> = ({ value, onChange }) => {
 
   const { collection, set } = useListCollection<CityResponse>({
     initialItems: [],
-    itemToString: (item) => item.name,
-    itemToValue: (item) => `${item.id}`,
+    itemToString: (item) => `${item.name}, ${item.country}`,
+    itemToValue: (item) => `${item.lat},${item.lon}`,
   });
 
   const onChangeInputDebounce = useMemo(
@@ -51,14 +51,14 @@ const CitySearchInput: FC<CitySearchProps> = ({ value, onChange }) => {
   return (
     <Combobox.Root
       collection={collection}
-      placeholder="City name"
+      placeholder="City"
       onInputValueChange={(e) => onChangeInputDebounce(e.inputValue)}
-      onSelect={(data) => onChange(data.value)}
+      onSelect={(data) => onChange([data.itemValue])}
       value={value}
       positioning={{ sameWidth: false, placement: "bottom-start" }}
       gap={0}
     >
-      <Combobox.Label>Find City</Combobox.Label>
+      <Combobox.Label>City</Combobox.Label>
       <Combobox.Control>
         <Combobox.Input placeholder="City" />
         <Combobox.IndicatorGroup>
@@ -80,7 +80,7 @@ const CitySearchInput: FC<CitySearchProps> = ({ value, onChange }) => {
                 <Combobox.Item key={city.id} item={city}>
                   <HStack justify="space-between" textStyle="sm">
                     <Span fontWeight="medium" truncate>
-                      {city.name}
+                      {city.name}, {city.country}
                     </Span>
                   </HStack>
                   <Combobox.ItemIndicator />
