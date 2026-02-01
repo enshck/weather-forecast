@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "ESNext", // Rollup сам решит модули
+    "lib": ["ES2019"],
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "dist/server",
+    "rootDir": "server",
+    "types": ["google-apps-script"]
+  },
+  "include": ["server/**/*"]
+}
