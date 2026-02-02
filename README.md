@@ -11,5 +11,5 @@
 9. Open settings of the addon and add WEATHER_API_KEY variable with your weather api key
 10. After that you should see this addon in assigned table
 
-<p align="center"><strong>!!!IMPORTANT NOTE!!!</strong></p>
-Weather Api doesn't give possibility to use `days` parameter for custom date(not today). If you select another start date, max days for forecast slider will be blocked. Not so sure if it's bug of Weather Api or limitation
+**!!!IMPORTANT NOTE!!!**
+Weather Api doesn't give possibility to use `days` parameter for custom date(not today). If you select another start date, `max days for forecast` slider will be blocked. Not so sure if it's bug of Weather Api or limitation
