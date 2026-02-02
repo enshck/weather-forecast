@@ -7,7 +7,7 @@
 5. Make sure that you have CLASP globally installed
 6. Run **clasp login** to login :)
 7. Run **clasp push**(please make sure that you already have dist directory)
-8. Open your **apps script** addon should be already here
+8. Open your **apps script**, addon should be already here
 9. Open settings of the addon and add WEATHER_API_KEY variable with your weather api key
 10. After that you should see this addon in assigned table
 
